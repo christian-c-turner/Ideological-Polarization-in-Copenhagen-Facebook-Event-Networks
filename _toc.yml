@@ -5,4 +5,5 @@ chapters:
   - file: notebooks/03_ideology_analysis
   - file: notebooks/04_demographic_mixing
   - file: notebooks/05_supplementary_analysis
+  - file: notebooks/06_user_network_stats
   - file: thesis
