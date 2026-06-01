@@ -15,3 +15,7 @@ repository:
 html:
   use_issues_button: false
   use_repository_button: true
+
+sphinx:
+  config:
+    html_extra_path: ['thesis-paper.pdf']
