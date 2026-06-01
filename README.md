@@ -5,6 +5,8 @@
 M.Sc. in Social Data Science — University of Copenhagen, April 2025  
 Supervised by Hjalmar Bang Carlsen & David Broomham
 
+**[View the interactive notebook site →](https://christian-c-turner.github.io/Thesis/)**
+
 ---
 
 ## Abstract

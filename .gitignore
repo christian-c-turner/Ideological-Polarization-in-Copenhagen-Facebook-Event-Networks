@@ -19,6 +19,9 @@ venv/
 # Jupyter
 .ipynb_checkpoints/
 
+# Jupyter Book build output
+_build/
+
 # Old working files — development notebooks, superseded by the clean pipeline
 Old Code/
 

@@ -1,0 +1,7 @@
+format: jb-book
+root: notebooks/01_data_cleaning
+chapters:
+  - file: notebooks/02_graph_construction
+  - file: notebooks/03_ideology_analysis
+  - file: notebooks/04_demographic_mixing
+  - file: notebooks/05_supplementary_analysis
