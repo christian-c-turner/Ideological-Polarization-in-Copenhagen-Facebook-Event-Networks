@@ -8,7 +8,7 @@ execute:
   execute_notebooks: "off"
 
 repository:
-  url: https://github.com/christian-c-turner/Thesis
+  url: https://github.com/christian-c-turner/Ideological-Polarization-in-Copenhagen-Facebook-Event-Networks
   branch: main
   path_to_book: ""
 
