@@ -1,0 +1,27 @@
+# Raw event and user data — not committed (large, sensitive)
+raw-data/*.csv
+
+# Generated data — produced by running the notebooks
+data/processed/*
+!data/processed/.gitkeep
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Old working files — development notebooks, superseded by the clean pipeline
+Old Code/
+
+# Internal tooling
+openspec/
+.claude/
