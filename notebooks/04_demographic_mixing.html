@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Notebook 4: Demographic Mixing Analysis &#8212; Ideological Polarization in Urban Social Networks: A Study of Facebook Event Attendance in Copenhagen (2013–2017)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04_demographic_mixing';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notebook 5: Supplementary Analysis" href="05_supplementary_analysis.html" />
+    <link rel="prev" title="Notebook 3: Ideology Analysis — Generalized Euclidean Distance" href="03_ideology_analysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="01_data_cleaning.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ideological Polarization in Urban Social Networks: A Study of Facebook Event Attendance in Copenhagen (2013–2017)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="01_data_cleaning.html">
+                    Notebook 1: Data Cleaning and Preprocessing
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="02_graph_construction.html">Notebook 2: Graph Construction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_ideology_analysis.html">Notebook 3: Ideology Analysis — Generalized Euclidean Distance</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebook 4: Demographic Mixing Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_supplementary_analysis.html">Notebook 5: Supplementary Analysis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/christian-c-turner/Ideological-Polarization-in-Copenhagen-Facebook-Event-Networks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/04_demographic_mixing.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Notebook 4: Demographic Mixing Analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-inputs">1. Load Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-co-attendance-baselines">2. Expected Co-attendance Baselines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observed-co-attendance">3. Observed Co-attendance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-deviation-tables">4. Build Deviation Tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-functions">5. Plotting Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gender-mixing-figures-7-3-and-e-1">6. Gender Mixing — Figures 7.3 and E.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-mixing-figures-7-4-and-e-2">7. Heritage Mixing — Figures 7.4 and E.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideology-mixing-figures-7-5-and-e-3">8. Ideology Mixing — Figures 7.5 and E.3</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="notebook-4-demographic-mixing-analysis">
+<h1>Notebook 4: Demographic Mixing Analysis<a class="headerlink" href="#notebook-4-demographic-mixing-analysis" title="Link to this heading">#</a></h1>
+<p>Measures homophily in co-attendance across three demographic dimensions — gender, heritage, and political ideology — by comparing observed co-attendance patterns in user-user networks against proportional mixing baselines.</p>
+<p><strong>Inputs</strong> from <code class="docutils literal notranslate"><span class="pre">../data/processed/</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">user_graph_{key}.pkl</span></code> — user-user LCC graphs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filtered_users_{key}.pkl</span></code> — user DataFrames (connected to event-event LCC)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filtered_events_{key}.pkl</span></code> — event DataFrames (LCC only)</p></li>
+</ul>
+<p><strong>Outputs</strong> (displayed inline):</p>
+<ul class="simple">
+<li><p>Tables E.3, E.4, E.5 — deviation statistics for ideology, heritage, and gender</p></li>
+<li><p>Figures 7.3, 7.4, 7.5 — deviation from expected co-attendance (small events)</p></li>
+<li><p>Figures E.1, E.2, E.3 — side-by-side small and medium event comparison</p></li>
+</ul>
+<p><strong>Pipeline</strong></p>
+<ol class="arabic simple">
+<li><p>Compute expected co-attendance percentages (proportional baseline)</p></li>
+<li><p>Compute observed co-attendance for each demographic group (edge-weight-aware)</p></li>
+<li><p>Calculate deviations from expected</p></li>
+<li><p>Produce deviation tables and plots for gender, heritage, and political ideology</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mf">2.3</span><span class="p">},</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.7</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data/processed&#39;</span><span class="p">)</span>
+
+<span class="n">KEYS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;small_2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;small_2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;small_2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;small_2016-2017&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;medium_2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;medium_2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;medium_2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;medium_2016-2017&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">YEARS</span>          <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">])</span>
+<span class="n">ELECTION_YEAR</span>  <span class="o">=</span> <span class="mf">2015.5</span>
+<span class="n">SHADING_RANGES</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2013.5</span><span class="p">,</span> <span class="mf">2014.5</span><span class="p">,</span> <span class="mf">2015.5</span><span class="p">,</span> <span class="mf">2016.5</span><span class="p">,</span> <span class="mf">2017.5</span><span class="p">]</span>
+<span class="n">SHADES</span>         <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#f0f0f0&quot;</span><span class="p">,</span> <span class="s2">&quot;#d0d0d0&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="load-inputs">
+<h2>1. Load Inputs<a class="headerlink" href="#load-inputs" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_pkl</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">user_graphs</span>    <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">load_pkl</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;user_graph_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span>       <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+<span class="n">filtered_users</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;filtered_users_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+<span class="n">filtered_events</span><span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;filtered_events_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loaded all inputs.&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">:</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">user_graphs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">G</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> users, </span><span class="si">{</span><span class="n">G</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> edges&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded all inputs.
+  small_2013-2014: 62,534 users, 867,261 edges
+  small_2014-2015: 72,066 users, 1,038,418 edges
+  small_2015-2016: 99,209 users, 1,484,858 edges
+  small_2016-2017: 113,432 users, 1,676,789 edges
+  medium_2013-2014: 126,726 users, 7,463,539 edges
+  medium_2014-2015: 150,725 users, 9,522,664 edges
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  medium_2015-2016: 189,586 users, 12,445,290 edges
+  medium_2016-2017: 192,082 users, 11,783,419 edges
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="expected-co-attendance-baselines">
+<h2>2. Expected Co-attendance Baselines<a class="headerlink" href="#expected-co-attendance-baselines" title="Link to this heading">#</a></h2>
+<p>The baseline for each attribute is the share of events attended by each group, computed from all users connected to the event-event LCC. This serves as the proportional mixing null — if attendees mixed randomly, co-attendance would reflect these shares.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_baselines</span><span class="p">(</span><span class="n">users_df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute expected co-attendance percentages for gender, heritage, and ideology.</span>
+<span class="sd">    </span>
+<span class="sd">    Expected % = share of events attended by each group (weighted by events_attended).</span>
+<span class="sd">    Excludes unlabelled users from the denominator.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">users_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span>
+        <span class="s1">&#39;gender_label&#39;</span><span class="p">:</span>   <span class="s1">&#39;no-gender&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;heritage_label&#39;</span><span class="p">:</span> <span class="s1">&#39;no-heritage&#39;</span><span class="p">,</span>
+    <span class="p">})</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;Non-political&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">pct_by_group</span><span class="p">(</span><span class="n">label_col</span><span class="p">,</span> <span class="n">positive_labels</span><span class="p">):</span>
+        <span class="n">totals</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">lbl</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">label_col</span><span class="p">]</span> <span class="o">==</span> <span class="n">lbl</span><span class="p">,</span> <span class="s1">&#39;events_attended&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">positive_labels</span>
+        <span class="p">}</span>
+        <span class="n">grand</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">totals</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">lbl</span><span class="p">:</span> <span class="p">(</span><span class="n">v</span> <span class="o">/</span> <span class="n">grand</span> <span class="o">*</span> <span class="mi">100</span> <span class="k">if</span> <span class="n">grand</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">lbl</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">totals</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;gender&#39;</span><span class="p">:</span>   <span class="n">pct_by_group</span><span class="p">(</span><span class="s1">&#39;gender_label&#39;</span><span class="p">,</span>   <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]),</span>
+        <span class="s1">&#39;heritage&#39;</span><span class="p">:</span> <span class="n">pct_by_group</span><span class="p">(</span><span class="s1">&#39;heritage_label&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish&#39;</span><span class="p">]),</span>
+        <span class="s1">&#39;ideology&#39;</span><span class="p">:</span> <span class="n">pct_by_group</span><span class="p">(</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">,</span>    <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">]),</span>
+    <span class="p">}</span>
+
+
+<span class="n">baselines</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">compute_baselines</span><span class="p">(</span><span class="n">filtered_users</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+
+<span class="c1"># Spot-check</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Baselines for small_2013-2014:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">dim</span><span class="p">,</span> <span class="n">vals</span> <span class="ow">in</span> <span class="n">baselines</span><span class="p">[</span><span class="s1">&#39;small_2013-2014&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">dim</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">vals</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Baselines for small_2013-2014:
+  gender: {&#39;M&#39;: np.float64(45.77278731836196), &#39;F&#39;: np.float64(54.22721268163805)}
+  heritage: {&#39;Danish&#39;: np.float64(60.03350083752094), &#39;Non-Danish&#39;: np.float64(39.96649916247906)}
+  ideology: {&#39;L&#39;: np.float64(82.15410385259632), &#39;R&#39;: np.float64(17.845896147403685)}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="observed-co-attendance">
+<h2>3. Observed Co-attendance<a class="headerlink" href="#observed-co-attendance" title="Link to this heading">#</a></h2>
+<p>For each labelled user in the user-user LCC, we examine their ego network: the neighbours they are connected to, weighted by edge weight (number of co-attended events). We record the fraction of each user’s labelled neighbours belonging to each group, then average across users within each group.</p>
+<p><strong>Deviation</strong> = Observed % − Expected %</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_mixing_stats</span><span class="p">(</span><span class="n">user_graph</span><span class="p">,</span> <span class="n">users_df</span><span class="p">,</span> <span class="n">attribute</span><span class="p">,</span> <span class="n">group_labels</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute observed co-attendance stats for one demographic attribute.</span>
+
+<span class="sd">    Uses a pre-computed dict for O(1) attribute lookups to keep the inner</span>
+<span class="sd">    loop fast even on graphs with millions of edges.</span>
+
+<span class="sd">    Returns a dict keyed by group label containing mean observed %s per</span>
+<span class="sd">    neighbour group.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">valid_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">group_labels</span><span class="p">)</span>
+
+    <span class="c1"># Pre-build attribute map — only include users with a valid (non-null) label</span>
+    <span class="n">attr_series</span> <span class="o">=</span> <span class="n">users_df</span><span class="p">[[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">,</span> <span class="n">attribute</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">attribute</span><span class="p">])</span>
+    <span class="n">attr_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">attr_series</span><span class="p">[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">],</span> <span class="n">attr_series</span><span class="p">[</span><span class="n">attribute</span><span class="p">]))</span>
+    <span class="c1"># Filter to only labelled groups (e.g. drop &#39;Non-political&#39; from ideology)</span>
+    <span class="n">attr_map</span> <span class="o">=</span> <span class="p">{</span><span class="n">uid</span><span class="p">:</span> <span class="n">lbl</span> <span class="k">for</span> <span class="n">uid</span><span class="p">,</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">attr_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">valid_set</span><span class="p">}</span>
+
+    <span class="n">group_results</span> <span class="o">=</span> <span class="p">{</span><span class="n">lbl</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">group_labels</span><span class="p">}</span>
+
+    <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">user_graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
+        <span class="n">ego_label</span> <span class="o">=</span> <span class="n">attr_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ego_label</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">counts</span> <span class="o">=</span> <span class="p">{</span><span class="n">lbl</span><span class="p">:</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">group_labels</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">neighbour</span><span class="p">,</span> <span class="n">edge_data</span> <span class="ow">in</span> <span class="n">user_graph</span><span class="p">[</span><span class="n">user</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">nb_label</span> <span class="o">=</span> <span class="n">attr_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">neighbour</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">nb_label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">counts</span><span class="p">[</span><span class="n">nb_label</span><span class="p">]</span> <span class="o">+=</span> <span class="n">edge_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;weight&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">total</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">obs</span> <span class="o">=</span> <span class="p">{</span><span class="n">lbl</span><span class="p">:</span> <span class="n">counts</span><span class="p">[</span><span class="n">lbl</span><span class="p">]</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span> <span class="k">for</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">group_labels</span><span class="p">}</span>
+        <span class="n">obs</span><span class="p">[</span><span class="s1">&#39;total_neighbours&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">total</span>
+        <span class="n">group_results</span><span class="p">[</span><span class="n">ego_label</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obs</span><span class="p">)</span>
+
+    <span class="n">summary</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">ego_lbl</span> <span class="ow">in</span> <span class="n">group_labels</span><span class="p">:</span>
+        <span class="n">rows</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">group_results</span><span class="p">[</span><span class="n">ego_lbl</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">rows</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">summary</span><span class="p">[</span><span class="n">ego_lbl</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="sa">f</span><span class="s1">&#39;obs_</span><span class="si">{</span><span class="n">lbl</span><span class="si">}</span><span class="s1"> (%)&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span> <span class="k">for</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">group_labels</span><span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">entry</span> <span class="o">=</span> <span class="p">{</span><span class="sa">f</span><span class="s1">&#39;obs_</span><span class="si">{</span><span class="n">lbl</span><span class="si">}</span><span class="s1"> (%)&#39;</span><span class="p">:</span> <span class="n">rows</span><span class="p">[</span><span class="n">lbl</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">lbl</span> <span class="ow">in</span> <span class="n">group_labels</span><span class="p">}</span>
+            <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;avg_total_neighbours&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rows</span><span class="p">[</span><span class="s1">&#39;total_neighbours&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+            <span class="n">summary</span><span class="p">[</span><span class="n">ego_lbl</span><span class="p">]</span> <span class="o">=</span> <span class="n">entry</span>
+
+    <span class="k">return</span> <span class="n">summary</span>
+
+
+<span class="n">DIMENSIONS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;gender&#39;</span><span class="p">:</span>   <span class="p">(</span><span class="s1">&#39;gender_label&#39;</span><span class="p">,</span>   <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;heritage&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;heritage_label&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;ideology&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">,</span>    <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">]),</span>
+<span class="p">}</span>
+
+<span class="n">mixing_stats</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="n">mixing_stats</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">dim</span><span class="p">,</span> <span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span> <span class="ow">in</span> <span class="n">DIMENSIONS</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">mixing_stats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">dim</span><span class="p">]</span> <span class="o">=</span> <span class="n">compute_mixing_stats</span><span class="p">(</span>
+            <span class="n">user_graphs</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">filtered_users</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">col</span><span class="p">,</span> <span class="n">labels</span>
+        <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  done&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2013-2014...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+small_2014-2015...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+small_2015-2016...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+small_2016-2017...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+medium_2013-2014...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+medium_2014-2015...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+medium_2015-2016...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+medium_2016-2017...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  done
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="build-deviation-tables">
+<h2>4. Build Deviation Tables<a class="headerlink" href="#build-deviation-tables" title="Link to this heading">#</a></h2>
+<p>Tables E.3 (ideology), E.4 (heritage), E.5 (gender).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_deviation_table</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">ego_labels</span><span class="p">,</span> <span class="n">obs_labels</span><span class="p">,</span> <span class="n">baseline_keys</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Build a deviation DataFrame for one demographic dimension.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dimension:    &#39;gender&#39;, &#39;heritage&#39;, or &#39;ideology&#39;</span>
+<span class="sd">        ego_labels:   the groups whose ego networks we examine, e.g. [&#39;M&#39;,&#39;F&#39;]</span>
+<span class="sd">        obs_labels:   the neighbour groups we measure, same as ego_labels</span>
+<span class="sd">        baseline_keys: the keys in baselines[key][dimension] to pull expected %s</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;2016-2017&#39;</span><span class="p">]:</span>
+            <span class="n">key</span>  <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">period</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="n">stats</span> <span class="o">=</span> <span class="n">mixing_stats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">dimension</span><span class="p">]</span>
+            <span class="n">bl</span>    <span class="o">=</span> <span class="n">baselines</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">dimension</span><span class="p">]</span>
+
+            <span class="k">for</span> <span class="n">ego_lbl</span> <span class="ow">in</span> <span class="n">ego_labels</span><span class="p">:</span>
+                <span class="n">row</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s1">&#39;Event Size&#39;</span><span class="p">:</span> <span class="n">size</span><span class="p">,</span> <span class="s1">&#39;Time Period&#39;</span><span class="p">:</span> <span class="n">period</span><span class="p">,</span> <span class="s1">&#39;Group&#39;</span><span class="p">:</span> <span class="n">ego_lbl</span><span class="p">,</span>
+                <span class="p">}</span>
+                <span class="k">for</span> <span class="n">obs_lbl</span><span class="p">,</span> <span class="n">bl_key</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">obs_labels</span><span class="p">,</span> <span class="n">baseline_keys</span><span class="p">):</span>
+                    <span class="n">expected</span> <span class="o">=</span> <span class="n">bl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">bl_key</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+                    <span class="n">observed</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ego_lbl</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;obs_</span><span class="si">{</span><span class="n">obs_lbl</span><span class="si">}</span><span class="s1"> (%)&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+                    <span class="n">row</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Deviation </span><span class="si">{</span><span class="n">obs_lbl</span><span class="si">}</span><span class="s1"> (pp)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">observed</span> <span class="o">-</span> <span class="n">expected</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+                    <span class="n">row</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Expected </span><span class="si">{</span><span class="n">obs_lbl</span><span class="si">}</span><span class="s1"> (%)&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">expected</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                <span class="n">rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+
+
+<span class="n">table_e5</span> <span class="o">=</span> <span class="n">build_deviation_table</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span>   <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>             <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>             <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">])</span>
+<span class="n">table_e4</span> <span class="o">=</span> <span class="n">build_deviation_table</span><span class="p">(</span><span class="s1">&#39;heritage&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish&#39;</span><span class="p">],[</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish&#39;</span><span class="p">],[</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish&#39;</span><span class="p">])</span>
+<span class="n">table_e3</span> <span class="o">=</span> <span class="n">build_deviation_table</span><span class="p">(</span><span class="s1">&#39;ideology&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">],</span>             <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">],</span>             <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Table E.5 — Gender co-attendance deviation:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_e5</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Table E.5 — Gender co-attendance deviation:
+Event Size Time Period Group  Deviation M (pp)  Expected M (%)  Deviation F (pp)  Expected F (%)
+     Small   2013-2014     M              7.71           45.77             -7.71           54.23
+     Small   2013-2014     F             -7.55           45.77              7.55           54.23
+     Small   2014-2015     M              7.94           43.61             -7.94           56.39
+     Small   2014-2015     F             -8.52           43.61              8.52           56.39
+     Small   2015-2016     M              8.37           42.49             -8.37           57.51
+     Small   2015-2016     F             -8.16           42.49              8.16           57.51
+     Small   2016-2017     M              9.18           42.73             -9.18           57.27
+     Small   2016-2017     F             -8.25           42.73              8.25           57.27
+    Medium   2013-2014     M              5.93           45.60             -5.93           54.40
+    Medium   2013-2014     F             -6.11           45.60              6.11           54.40
+    Medium   2014-2015     M              6.31           44.28             -6.31           55.72
+    Medium   2014-2015     F             -6.05           44.28              6.05           55.72
+    Medium   2015-2016     M              7.26           43.93             -7.26           56.07
+    Medium   2015-2016     F             -7.28           43.93              7.28           56.07
+    Medium   2016-2017     M              7.44           44.22             -7.44           55.78
+    Medium   2016-2017     F             -7.88           44.22              7.88           55.78
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Table E.4 — Heritage co-attendance deviation:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_e4</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Table E.4 — Heritage co-attendance deviation:
+Event Size Time Period      Group  Deviation Danish (pp)  Expected Danish (%)  Deviation Non-Danish (pp)  Expected Non-Danish (%)
+     Small   2013-2014     Danish                   1.21                60.03                      -1.21                    39.97
+     Small   2013-2014 Non-Danish                  -1.71                60.03                       1.71                    39.97
+     Small   2014-2015     Danish                   1.52                59.95                      -1.52                    40.05
+     Small   2014-2015 Non-Danish                  -3.19                59.95                       3.19                    40.05
+     Small   2015-2016     Danish                   2.36                59.30                      -2.36                    40.70
+     Small   2015-2016 Non-Danish                  -2.79                59.30                       2.79                    40.70
+     Small   2016-2017     Danish                   2.62                58.10                      -2.62                    41.90
+     Small   2016-2017 Non-Danish                  -3.28                58.10                       3.28                    41.90
+    Medium   2013-2014     Danish                   2.54                58.68                      -2.54                    41.32
+    Medium   2013-2014 Non-Danish                  -2.54                58.68                       2.54                    41.32
+    Medium   2014-2015     Danish                   3.06                57.67                      -3.06                    42.33
+    Medium   2014-2015 Non-Danish                  -2.54                57.67                       2.54                    42.33
+    Medium   2015-2016     Danish                   3.41                56.53                      -3.41                    43.47
+    Medium   2015-2016 Non-Danish                  -3.08                56.53                       3.08                    43.47
+    Medium   2016-2017     Danish                   3.12                56.64                      -3.12                    43.36
+    Medium   2016-2017 Non-Danish                  -2.93                56.64                       2.93                    43.36
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Table E.3 — Ideological co-attendance deviation:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_e3</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Table E.3 — Ideological co-attendance deviation:
+Event Size Time Period Group  Deviation L (pp)  Expected L (%)  Deviation R (pp)  Expected R (%)
+     Small   2013-2014     L              4.70           82.15             -4.70           17.85
+     Small   2013-2014     R            -20.63           82.15             20.63           17.85
+     Small   2014-2015     L              5.65           80.66             -5.65           19.34
+     Small   2014-2015     R            -22.07           80.66             22.07           19.34
+     Small   2015-2016     L              4.29           81.71             -4.29           18.29
+     Small   2015-2016     R            -19.46           81.71             19.46           18.29
+     Small   2016-2017     L              3.79           82.06             -3.79           17.94
+     Small   2016-2017     R            -20.31           82.06             20.31           17.94
+    Medium   2013-2014     L              2.84           83.11             -2.84           16.89
+    Medium   2013-2014     R            -21.88           83.11             21.88           16.89
+    Medium   2014-2015     L              3.08           82.59             -3.08           17.41
+    Medium   2014-2015     R            -21.75           82.59             21.75           17.41
+    Medium   2015-2016     L              2.92           82.81             -2.92           17.19
+    Medium   2015-2016     R            -21.64           82.81             21.64           17.19
+    Medium   2016-2017     L              2.65           82.08             -2.65           17.92
+    Medium   2016-2017     R            -19.48           82.08             19.48           17.92
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plotting-functions">
+<h2>5. Plotting Functions<a class="headerlink" href="#plotting-functions" title="Link to this heading">#</a></h2>
+<p>Each plot shows the deviation from expected co-attendance over time. A positive deviation means a group co-attends with its own group more than chance would predict (homophily). A negative deviation means under-representation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">year_from_key</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{4}</span><span class="s1">)-(\d</span><span class="si">{4}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span> <span class="k">if</span> <span class="n">m</span> <span class="k">else</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">extract_series</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">ego_label</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">size_label</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return (years, deviations) for a given group and event size.&quot;&quot;&quot;</span>
+    <span class="n">pts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">size_label</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="n">year</span>  <span class="o">=</span> <span class="n">year_from_key</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">stats</span> <span class="o">=</span> <span class="n">mixing_stats</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">dimension</span><span class="p">]</span>
+        <span class="n">bl</span>    <span class="o">=</span> <span class="n">baselines</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="n">dimension</span><span class="p">]</span>
+
+        <span class="n">obs_lbl</span><span class="p">,</span> <span class="n">bl_key</span> <span class="o">=</span> <span class="n">dev_col</span>
+        <span class="n">expected</span> <span class="o">=</span> <span class="n">bl</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">bl_key</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="n">observed</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ego_label</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;obs_</span><span class="si">{</span><span class="n">obs_lbl</span><span class="si">}</span><span class="s1"> (%)&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="n">dev</span>      <span class="o">=</span> <span class="n">observed</span> <span class="o">-</span> <span class="n">expected</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">observed</span><span class="p">)</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="n">pts</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">year</span><span class="p">,</span> <span class="n">dev</span><span class="p">))</span>
+
+    <span class="n">pts</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pts</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pts</span><span class="p">])</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">add_shading</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SHADING_RANGES</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">fill_betweenx</span><span class="p">([</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">],</span> <span class="n">SHADING_RANGES</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">SHADING_RANGES</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span>
+                         <span class="n">color</span><span class="o">=</span><span class="n">SHADES</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_deviation_side_by_side</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">series_spec</span><span class="p">,</span> <span class="n">title_prefix</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot small and medium event deviation side by side.</span>
+
+<span class="sd">    series_spec: list of (ego_label, (obs_col, bl_key), color, marker, line_label)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">size_label</span><span class="p">,</span> <span class="n">subtitle</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;small&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Small Events&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium Events&#39;</span><span class="p">]):</span>
+        <span class="n">all_y</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">marker</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">series_spec</span><span class="p">:</span>
+            <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">extract_series</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">size_label</span><span class="p">)</span>
+            <span class="n">all_y</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ys</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ys</span><span class="p">)])</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">all_y</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">y_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">all_y</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.1</span>
+        <span class="n">y_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">all_y</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.1</span>
+
+        <span class="n">add_shading</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">marker</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">series_spec</span><span class="p">:</span>
+            <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">extract_series</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">size_label</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ELECTION_YEAR</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+                   <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Election June 18, 2015&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">YEARS</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">title_prefix</span><span class="si">}</span><span class="se">\n</span><span class="s1">(</span><span class="si">{</span><span class="n">subtitle</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Deviation (%)&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.35</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="n">filename</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_deviation_single</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">series_spec</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">size_label</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Plot deviation for a single event size (used for the main-text figures).&quot;&quot;&quot;</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+    <span class="n">all_y</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">marker</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">series_spec</span><span class="p">:</span>
+        <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">extract_series</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">size_label</span><span class="p">)</span>
+        <span class="n">all_y</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ys</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ys</span><span class="p">)])</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">all_y</span><span class="p">:</span>
+        <span class="k">return</span>
+    <span class="n">y_min</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">all_y</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.1</span>
+    <span class="n">y_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">all_y</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.1</span>
+
+    <span class="n">add_shading</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">marker</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">series_spec</span><span class="p">:</span>
+        <span class="n">xs</span><span class="p">,</span> <span class="n">ys</span> <span class="o">=</span> <span class="n">extract_series</span><span class="p">(</span><span class="n">dimension</span><span class="p">,</span> <span class="n">ego_lbl</span><span class="p">,</span> <span class="n">dev_col</span><span class="p">,</span> <span class="n">size_label</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;No Deviation&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ELECTION_YEAR</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+               <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Election June 18, 2015&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">YEARS</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Deviation (%)&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.02</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="n">filename</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="gender-mixing-figures-7-3-and-e-1">
+<h2>6. Gender Mixing — Figures 7.3 and E.1<a class="headerlink" href="#gender-mixing-figures-7-3-and-e-1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_series</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># (ego_label, (obs_col, baseline_key), color,      marker, legend_label)</span>
+    <span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">),</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;Men → Men&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="s1">&#39;#66b3ff&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;Men → Women&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">),</span> <span class="s1">&#39;#ff9999&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;Women → Men&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="s1">&#39;#ff9999&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;Women → Women&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># Figure 7.3 — small events only (main text)</span>
+<span class="n">plot_deviation_single</span><span class="p">(</span>
+    <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="n">gender_series</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Deviation From Expected Co-attendance Between Genders&#39;</span><span class="p">,</span>
+    <span class="n">size_label</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;figure_7_3_gender_deviation_small.png&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Figure E.1 — side-by-side small and medium (appendix)</span>
+<span class="n">plot_deviation_side_by_side</span><span class="p">(</span>
+    <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="n">gender_series</span><span class="p">,</span>
+    <span class="n">title_prefix</span><span class="o">=</span><span class="s1">&#39;Deviation From Expected Co-attendance Between Genders&#39;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;figure_e1_gender_deviation.png&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/6ab938f0cded415e2f1f42e305412b23c71c2861212e7dcf3eb739cecc465c6e.png" src="../_images/6ab938f0cded415e2f1f42e305412b23c71c2861212e7dcf3eb739cecc465c6e.png" />
+<img alt="../_images/ae40164556f9fcd9fc886aba61329ac2ee4566231294355d8b3fd5b94ef4cf17.png" src="../_images/ae40164556f9fcd9fc886aba61329ac2ee4566231294355d8b3fd5b94ef4cf17.png" />
+</div>
+</div>
+</section>
+<section id="heritage-mixing-figures-7-4-and-e-2">
+<h2>7. Heritage Mixing — Figures 7.4 and E.2<a class="headerlink" href="#heritage-mixing-figures-7-4-and-e-2" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">heritage_series</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span>     <span class="p">(</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span>     <span class="s1">&#39;Danish&#39;</span><span class="p">),</span>     <span class="s1">&#39;#4daf4a&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;Danish → Danish&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span>     <span class="p">(</span><span class="s1">&#39;Non-Danish&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish&#39;</span><span class="p">),</span> <span class="s1">&#39;#4daf4a&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;Danish → Non-Danish&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Non-Danish&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Danish&#39;</span><span class="p">,</span>     <span class="s1">&#39;Danish&#39;</span><span class="p">),</span>     <span class="s1">&#39;#984ea3&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish → Danish&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Non-Danish&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;Non-Danish&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish&#39;</span><span class="p">),</span> <span class="s1">&#39;#984ea3&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Danish → Non-Danish&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># Figure 7.4 — small events only (main text)</span>
+<span class="n">plot_deviation_single</span><span class="p">(</span>
+    <span class="s1">&#39;heritage&#39;</span><span class="p">,</span> <span class="n">heritage_series</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Deviation From Expected Co-attendance by Heritage&#39;</span><span class="p">,</span>
+    <span class="n">size_label</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;figure_7_4_heritage_deviation_small.png&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Figure E.2 — side-by-side (appendix)</span>
+<span class="n">plot_deviation_side_by_side</span><span class="p">(</span>
+    <span class="s1">&#39;heritage&#39;</span><span class="p">,</span> <span class="n">heritage_series</span><span class="p">,</span>
+    <span class="n">title_prefix</span><span class="o">=</span><span class="s1">&#39;Deviation From Expected Co-attendance by Heritage&#39;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;figure_e2_heritage_deviation.png&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/a8a317f9b98a2f83c8c0434808d4a542360b9df3ab5296e33694305739a63ff6.png" src="../_images/a8a317f9b98a2f83c8c0434808d4a542360b9df3ab5296e33694305739a63ff6.png" />
+<img alt="../_images/624c92e75cc78dedcc7aa69490179d095ef63ef6fe6d07c2a8ed7f84c322e95c.png" src="../_images/624c92e75cc78dedcc7aa69490179d095ef63ef6fe6d07c2a8ed7f84c322e95c.png" />
+</div>
+</div>
+</section>
+<section id="ideology-mixing-figures-7-5-and-e-3">
+<h2>8. Ideology Mixing — Figures 7.5 and E.3<a class="headerlink" href="#ideology-mixing-figures-7-5-and-e-3" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ideology_series</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">),</span> <span class="s1">&#39;#2166ac&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;Left → Left&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">),</span> <span class="s1">&#39;#2166ac&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;Left → Right&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">),</span> <span class="s1">&#39;#d6604d&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;Right → Left&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">),</span> <span class="s1">&#39;#d6604d&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;Right → Right&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="c1"># Figure 7.5 — small events only (main text)</span>
+<span class="n">plot_deviation_single</span><span class="p">(</span>
+    <span class="s1">&#39;ideology&#39;</span><span class="p">,</span> <span class="n">ideology_series</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Deviation From Expected Co-attendance by Ideology&#39;</span><span class="p">,</span>
+    <span class="n">size_label</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;figure_7_5_ideology_deviation_small.png&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Figure E.3 — side-by-side (appendix)</span>
+<span class="n">plot_deviation_side_by_side</span><span class="p">(</span>
+    <span class="s1">&#39;ideology&#39;</span><span class="p">,</span> <span class="n">ideology_series</span><span class="p">,</span>
+    <span class="n">title_prefix</span><span class="o">=</span><span class="s1">&#39;Deviation From Expected Co-attendance by Ideology&#39;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;figure_e3_ideology_deviation.png&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/bf915f52ce9f0a4de50d8603b9f0ce525b5b11fd775e90cde8704f01af66e4ac.png" src="../_images/bf915f52ce9f0a4de50d8603b9f0ce525b5b11fd775e90cde8704f01af66e4ac.png" />
+<img alt="../_images/27e67c1d0d5b3c308a5b85c07abe117c7de10a1cce2617f7462a8b6c77e5d337.png" src="../_images/27e67c1d0d5b3c308a5b85c07abe117c7de10a1cce2617f7462a8b6c77e5d337.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_ideology_analysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebook 3: Ideology Analysis — Generalized Euclidean Distance</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_supplementary_analysis.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebook 5: Supplementary Analysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-inputs">1. Load Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-co-attendance-baselines">2. Expected Co-attendance Baselines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#observed-co-attendance">3. Observed Co-attendance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-deviation-tables">4. Build Deviation Tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-functions">5. Plotting Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gender-mixing-figures-7-3-and-e-1">6. Gender Mixing — Figures 7.3 and E.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-mixing-figures-7-4-and-e-2">7. Heritage Mixing — Figures 7.4 and E.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideology-mixing-figures-7-5-and-e-3">8. Ideology Mixing — Figures 7.5 and E.3</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Christian Cole Turner
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

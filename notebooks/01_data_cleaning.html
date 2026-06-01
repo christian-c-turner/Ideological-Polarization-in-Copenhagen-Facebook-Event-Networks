@@ -1,0 +1,1086 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Notebook 1: Data Cleaning and Preprocessing &#8212; Ideological Polarization in Urban Social Networks: A Study of Facebook Event Attendance in Copenhagen (2013–2017)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/01_data_cleaning';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notebook 2: Graph Construction" href="02_graph_construction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ideological Polarization in Urban Social Networks: A Study of Facebook Event Attendance in Copenhagen (2013–2017)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Notebook 1: Data Cleaning and Preprocessing
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="02_graph_construction.html">Notebook 2: Graph Construction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_ideology_analysis.html">Notebook 3: Ideology Analysis — Generalized Euclidean Distance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_demographic_mixing.html">Notebook 4: Demographic Mixing Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_supplementary_analysis.html">Notebook 5: Supplementary Analysis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/christian-c-turner/Ideological-Polarization-in-Copenhagen-Facebook-Event-Networks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/01_data_cleaning.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Notebook 1: Data Cleaning and Preprocessing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-raw-data">1. Load Raw Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-events">2. Filter Events</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-user-dataset">3. Build User Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bot-removal">4. Bot Removal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterative-cleaning">5. Iterative Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideology-scoring">6. Ideology Scoring</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-by-event-size-and-time-period">7. Split by Event Size and Time Period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-period-iterative-cleaning">8. Per-Period Iterative Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-outputs">9. Save Outputs</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="notebook-1-data-cleaning-and-preprocessing">
+<h1>Notebook 1: Data Cleaning and Preprocessing<a class="headerlink" href="#notebook-1-data-cleaning-and-preprocessing" title="Link to this heading">#</a></h1>
+<p>This notebook loads the raw Facebook event data, filters and cleans it, assigns ideology scores to users and events, and produces eight cleaned datasets (small/medium events × four annual periods) ready for graph construction.</p>
+<p><strong>Outputs</strong> saved to <code class="docutils literal notranslate"><span class="pre">../data/processed/</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">events_{size}_{period}.pkl</span></code> — 8 event DataFrames</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users_{size}_{period}.pkl</span></code> — 8 user DataFrames</p></li>
+</ul>
+<p><strong>Pipeline</strong></p>
+<ol class="arabic simple">
+<li><p>Load raw events and political user metadata</p></li>
+<li><p>Filter events (duplicates, cancellations, coordinates, date range)</p></li>
+<li><p>Geographic filter — Copenhagen and Frederiksberg municipalities</p></li>
+<li><p>Build user dataset and merge with political metadata</p></li>
+<li><p>Remove bot accounts (top 0.01% by events attended)</p></li>
+<li><p>Iterative cleaning — remove events with no political attendees</p></li>
+<li><p>Assign ideology scores to users and events</p></li>
+<li><p>Split by event size (small ≤ 30, medium 31–100) and time period (annual, June–June)</p></li>
+<li><p>Per-period iterative cleaning</p></li>
+<li><p>Save outputs</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ast</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">SettingWithCopyWarning</span><span class="p">)</span>
+
+<span class="n">RAW_DIR</span>  <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../raw-data&#39;</span><span class="p">)</span>
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data/processed&#39;</span><span class="p">)</span>
+<span class="n">DATA_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="load-raw-data">
+<h2>1. Load Raw Data<a class="headerlink" href="#load-raw-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">events</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">RAW_DIR</span> <span class="o">/</span> <span class="s1">&#39;full_data_mod_pickle.csv&#39;</span><span class="p">)</span>
+<span class="n">political_users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">RAW_DIR</span> <span class="o">/</span> <span class="s1">&#39;uid_metadata_segmented.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Parse attending lists from CSV strings to Python sets immediately</span>
+<span class="c1"># so all downstream code works with native Python collections.</span>
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">set</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="nb">set</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Preserve original attendee information before any filtering</span>
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;OG_n_attending&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;n_attending&#39;</span><span class="p">]</span>
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;OG_attending&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Events loaded:          </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Political users loaded: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">political_users</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/claude-501/ipykernel_81187/2124097638.py:1: DtypeWarning: Columns (24) have mixed types. Specify dtype option on import or set low_memory=False.
+  events = pd.read_csv(RAW_DIR / &#39;full_data_mod_pickle.csv&#39;)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Events loaded:          799,296
+Political users loaded: 512,154
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filter-events">
+<h2>2. Filter Events<a class="headerlink" href="#filter-events" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Starting:                    </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;8,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After dropping duplicates:   </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;8,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="o">~</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;canceled&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After removing canceled:     </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;8,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;n_attending&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After requiring ≥2 attendees:</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;8,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;place_latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After requiring coordinates: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;8,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">START_DATE</span><span class="p">,</span> <span class="n">END_DATE</span> <span class="o">=</span> <span class="s1">&#39;2013-06-19&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-06-18&#39;</span>
+<span class="n">date_str</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="p">[(</span><span class="n">date_str</span> <span class="o">&gt;=</span> <span class="n">START_DATE</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">date_str</span> <span class="o">&lt;=</span> <span class="n">END_DATE</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After date range filter:     </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;8,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting:                     799,296
+After dropping duplicates:    795,444
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>After removing canceled:      791,432
+After requiring ≥2 attendees: 592,546
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>After requiring coordinates:  458,527
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>After date range filter:      355,444
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Geographic filter: keep only events within Copenhagen and Frederiksberg municipalities</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+    <span class="n">events</span><span class="p">,</span>
+    <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;place_longitude&#39;</span><span class="p">],</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;place_latitude&#39;</span><span class="p">]),</span>
+    <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:4326&#39;</span>
+<span class="p">)</span>
+
+<span class="n">dk_shape</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">RAW_DIR</span> <span class="o">/</span> <span class="s1">&#39;dk_shape_cleaned.geojson&#39;</span><span class="p">)</span>
+
+<span class="n">gdf_dk</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">dk_shape</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">predicate</span><span class="o">=</span><span class="s1">&#39;within&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Events in Denmark:                    </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">gdf_dk</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;7,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">target_kommunes</span>  <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Frederiksberg&#39;</span><span class="p">,</span> <span class="s1">&#39;København&#39;</span><span class="p">]</span>
+<span class="n">cph_geometry</span>     <span class="o">=</span> <span class="n">dk_shape</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">dk_shape</span><span class="p">[</span><span class="s1">&#39;kommune&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">target_kommunes</span><span class="p">),</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">union_all</span><span class="p">()</span>
+<span class="n">events</span>           <span class="o">=</span> <span class="n">gdf_dk</span><span class="p">[</span><span class="n">gdf_dk</span><span class="o">.</span><span class="n">within</span><span class="p">(</span><span class="n">cph_geometry</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Events in Copenhagen + Frederiksberg: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">&gt;7,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Drop geometry and spatial join columns; add placeholders for political-attendee counts</span>
+<span class="n">drop_cols</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;updated&#39;</span><span class="p">,</span> <span class="s1">&#39;n_declined&#39;</span><span class="p">,</span> <span class="s1">&#39;declined&#39;</span><span class="p">,</span> <span class="s1">&#39;n_maybe&#39;</span><span class="p">,</span> <span class="s1">&#39;maybe&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;n_interested&#39;</span><span class="p">,</span> <span class="s1">&#39;interested&#39;</span><span class="p">,</span> <span class="s1">&#39;n_noreply&#39;</span><span class="p">,</span> <span class="s1">&#39;canceled&#39;</span><span class="p">,</span> <span class="s1">&#39;event_category&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;place_name&#39;</span><span class="p">,</span> <span class="s1">&#39;place_city&#39;</span><span class="p">,</span> <span class="s1">&#39;place_country&#39;</span><span class="p">,</span> <span class="s1">&#39;place_state&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;place_latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;place_longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;place_street&#39;</span><span class="p">,</span> <span class="s1">&#39;place_zip&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;noreply&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;index_right&#39;</span><span class="p">,</span> <span class="s1">&#39;kommune&#39;</span>
+<span class="p">]</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">drop_cols</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">events</span><span class="o">.</span><span class="n">columns</span><span class="p">])</span>
+
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;n_political_attending&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;political_attendees&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="p">[</span><span class="nb">set</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">))]</span>
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;percent_political&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Events in Denmark:                    343,927
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Events in Copenhagen + Frederiksberg: 103,826
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="build-user-dataset">
+<h2>3. Build User Dataset<a class="headerlink" href="#build-user-dataset" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Collect every unique attendee ID across all events</span>
+<span class="n">all_attendee_ids</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">uid</span>
+    <span class="k">for</span> <span class="n">attendees</span> <span class="ow">in</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">attendees</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unique attendees across all events: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_attendee_ids</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Intersect with political users who appear in our events</span>
+<span class="n">political_in_events</span> <span class="o">=</span> <span class="n">political_users</span><span class="p">[</span><span class="n">political_users</span><span class="p">[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">all_attendee_ids</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Political users present in events:  </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">political_in_events</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Build the full user DataFrame (all attendees, political metadata where available)</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">all_attendee_ids</span><span class="p">)})</span>
+<span class="n">users</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">political_in_events</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Count how many events each user attended</span>
+<span class="n">event_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span>
+    <span class="n">uid</span>
+    <span class="k">for</span> <span class="n">attendees</span> <span class="ow">in</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">attendees</span>
+<span class="p">)</span>
+<span class="n">users</span><span class="p">[</span><span class="s1">&#39;events_attended&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">event_counts</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># Mark users as politically active if they have an ideology score</span>
+<span class="n">users</span><span class="p">[</span><span class="s1">&#39;political&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="s1">&#39;party_lr_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total users:     </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Political users: </span><span class="si">{</span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;political&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Unique attendees across all events: 1,037,721
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Political users present in events:  160,704
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total users:     1,037,721
+Political users: 160,704
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="bot-removal">
+<h2>4. Bot Removal<a class="headerlink" href="#bot-removal" title="Link to this heading">#</a></h2>
+<p>Users in the top 0.01% by events attended are removed as likely bots.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bot_threshold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;events_attended&#39;</span><span class="p">],</span> <span class="mf">99.99</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;99.99th percentile threshold: </span><span class="si">{</span><span class="n">bot_threshold</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> events&quot;</span><span class="p">)</span>
+
+<span class="n">n_before</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+<span class="n">users</span>    <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;events_attended&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">bot_threshold</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Removed </span><span class="si">{</span><span class="n">n_before</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> bot accounts — </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> users remain&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>99.99th percentile threshold: 500 events
+Removed 104 bot accounts — 1,037,617 users remain
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="iterative-cleaning">
+<h2>5. Iterative Cleaning<a class="headerlink" href="#iterative-cleaning" title="Link to this heading">#</a></h2>
+<p>Events with no politically active attendees and users with no remaining events are removed in alternating passes until the dataset stabilises.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">update_counts</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Recompute attendee counts for each event given the current user set.&quot;&quot;&quot;</span>
+    <span class="n">valid_users</span>    <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">users_df</span><span class="p">[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">])</span>
+    <span class="n">political_ids</span>  <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">users_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">users_df</span><span class="p">[</span><span class="s1">&#39;political&#39;</span><span class="p">],</span> <span class="s1">&#39;hashed_id&#39;</span><span class="p">])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="n">attendees</span><span class="p">):</span>
+        <span class="n">filtered</span>  <span class="o">=</span> <span class="n">attendees</span> <span class="o">&amp;</span> <span class="n">valid_users</span>
+        <span class="n">political</span> <span class="o">=</span> <span class="n">filtered</span> <span class="o">&amp;</span> <span class="n">political_ids</span>
+        <span class="n">n</span>         <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">filtered</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">political</span><span class="p">),</span> <span class="n">political</span><span class="p">,</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">political</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span> <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.0</span><span class="p">)</span>
+
+    <span class="n">results</span> <span class="o">=</span> <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">process</span><span class="p">)</span>
+    <span class="n">events_df</span> <span class="o">=</span> <span class="n">events_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span>            <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;n_attending&#39;</span><span class="p">]</span>          <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;n_political_attending&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;political_attendees&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+    <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;percent_political&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">events_df</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update_event_counts_for_users</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Recompute events_attended for each user given the current event set.&quot;&quot;&quot;</span>
+    <span class="n">valid_ids</span>   <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">users_df</span><span class="p">[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">])</span>
+    <span class="n">user_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span>
+        <span class="n">uid</span>
+        <span class="k">for</span> <span class="n">attendees</span> <span class="ow">in</span> <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">attendees</span>
+        <span class="k">if</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">valid_ids</span>
+    <span class="p">)</span>
+    <span class="n">users_df</span> <span class="o">=</span> <span class="n">users_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">users_df</span><span class="p">[</span><span class="s1">&#39;events_attended&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">users_df</span><span class="p">[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">user_counts</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">users_df</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">iterative_drop</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">,</span> <span class="n">min_political</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">drop_users</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_iterations</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Remove events and users below thresholds until the dataset stabilises.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        min_political: minimum number of political attendees required per event.</span>
+<span class="sd">        drop_users:    if True, also remove users with events_attended &lt; 1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iterations</span><span class="p">):</span>
+        <span class="n">prev_events</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">events_df</span><span class="p">)</span>
+        <span class="n">prev_users</span>  <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">users_df</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">drop_users</span><span class="p">:</span>
+            <span class="n">users_df</span>  <span class="o">=</span> <span class="n">users_df</span><span class="p">[</span><span class="n">users_df</span><span class="p">[</span><span class="s1">&#39;events_attended&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="n">events_df</span> <span class="o">=</span> <span class="n">update_counts</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">)</span>
+        <span class="n">users_df</span>  <span class="o">=</span> <span class="n">update_event_counts_for_users</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">)</span>
+
+        <span class="n">events_df</span> <span class="o">=</span> <span class="n">events_df</span><span class="p">[</span><span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;n_political_attending&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">min_political</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">events_df</span> <span class="o">=</span> <span class="n">update_counts</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">)</span>
+        <span class="n">users_df</span>  <span class="o">=</span> <span class="n">update_event_counts_for_users</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">)</span>
+
+        <span class="n">dropped_e</span> <span class="o">=</span> <span class="n">prev_events</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">events_df</span><span class="p">)</span>
+        <span class="n">dropped_u</span> <span class="o">=</span> <span class="n">prev_users</span>  <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">users_df</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">dropped_e</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">dropped_u</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Converged in </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> iteration(s)&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Iteration </span><span class="si">{</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2">: -</span><span class="si">{</span><span class="n">dropped_e</span><span class="si">}</span><span class="s2"> events, -</span><span class="si">{</span><span class="n">dropped_u</span><span class="si">}</span><span class="s2"> users&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute initial counts, then run global iterative cleaning</span>
+<span class="n">events</span> <span class="o">=</span> <span class="n">update_counts</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">users</span><span class="p">)</span>
+<span class="n">users</span>  <span class="o">=</span> <span class="n">update_event_counts_for_users</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">users</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Before global cleaning: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> events, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> users&quot;</span><span class="p">)</span>
+<span class="n">events</span><span class="p">,</span> <span class="n">users</span> <span class="o">=</span> <span class="n">iterative_drop</span><span class="p">(</span><span class="n">events</span><span class="p">,</span> <span class="n">users</span><span class="p">,</span> <span class="n">min_political</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">drop_users</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After global cleaning:  </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> events, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">users</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> users&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Before global cleaning: 103,826 events, 1,037,617 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iteration 1: -11783 events, -0 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Iteration 2: -0 events, -7731 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 3 iteration(s)
+After global cleaning:  92,043 events, 1,029,886 users
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="ideology-scoring">
+<h2>6. Ideology Scoring<a class="headerlink" href="#ideology-scoring" title="Link to this heading">#</a></h2>
+<p>User ideology scores are normalised using a custom min-max transform centred on the midpoint of the Danish party spectrum (5.78). Scores below centre map to [−1, 0] (left); scores above map to [0, +1] (right).</p>
+<p>Each event is then assigned a weighted ideology score:</p>
+<div class="math notranslate nohighlight">
+\[\text{weighted ideology} = \overline{\text{ideology of political attendees}} \times \text{fraction politically active}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CENTER</span>    <span class="o">=</span> <span class="mf">5.78</span>
+<span class="n">LEFT_MIN</span>  <span class="o">=</span> <span class="mf">1.74</span>
+<span class="n">RIGHT_MAX</span> <span class="o">=</span> <span class="mf">7.40</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">normalize_ideology</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">CENTER</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">CENTER</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">CENTER</span> <span class="o">-</span> <span class="n">LEFT_MIN</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">CENTER</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">CENTER</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">RIGHT_MAX</span> <span class="o">-</span> <span class="n">CENTER</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mf">0.0</span>
+
+<span class="n">users</span><span class="p">[</span><span class="s1">&#39;party_lr_score&#39;</span><span class="p">]</span>    <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="s1">&#39;party_lr_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">users</span><span class="p">[</span><span class="s1">&#39;normalized_min_max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">users</span><span class="p">[</span><span class="s1">&#39;party_lr_score&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_ideology</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">users</span><span class="p">[</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+    <span class="n">condlist</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">users</span><span class="p">[</span><span class="s1">&#39;normalized_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">(),</span>
+        <span class="n">users</span><span class="p">[</span><span class="s1">&#39;normalized_min_max&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">users</span><span class="p">[</span><span class="s1">&#39;normalized_min_max&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="n">choicelist</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Non-political&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">],</span>
+    <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Non-political&#39;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">users</span><span class="p">[</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>l_r_min_max
+Non-political    869214
+L                105949
+R                 54723
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">user_ideology</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">)[</span><span class="s1">&#39;normalized_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">mean_ideology</span><span class="p">(</span><span class="n">political_attendees</span><span class="p">):</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="n">user_ideology</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span> <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">political_attendees</span><span class="p">]</span>
+    <span class="n">valid</span>  <span class="o">=</span> <span class="p">[</span><span class="n">s</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">scores</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">s</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">valid</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">valid</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;average_normalized_min_max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;political_attendees&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">mean_ideology</span><span class="p">)</span>
+<span class="n">events</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="p">(</span>
+    <span class="n">events</span><span class="p">[</span><span class="s1">&#39;average_normalized_min_max&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;percent_political&#39;</span><span class="p">]</span>
+<span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Events with ideology score: </span><span class="si">{</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average weighted ideology:  </span><span class="si">{</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Events with ideology score: 92,043
+Average weighted ideology:  -0.097
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="split-by-event-size-and-time-period">
+<h2>7. Split by Event Size and Time Period<a class="headerlink" href="#split-by-event-size-and-time-period" title="Link to this heading">#</a></h2>
+<p>Events are split into two size categories and four annual periods running from June 19 to June 18, aligned with the Danish election calendar. Large events (&gt; 100 attendees) are excluded from analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="n">events_small</span>  <span class="o">=</span> <span class="n">events</span><span class="p">[</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;n_attending&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">30</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">events_medium</span> <span class="o">=</span> <span class="n">events</span><span class="p">[(</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;n_attending&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">events</span><span class="p">[</span><span class="s1">&#39;n_attending&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">100</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Small events  (≤ 30):    </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events_small</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Medium events (31–100):  </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">events_medium</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Small events  (≤ 30):    50,477
+Medium events (31–100):  25,833
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TIME_PERIODS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;2013-2014&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;2013-06-19&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-06-18&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;2014-2015&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;2014-06-19&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-06-18&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;2015-2016&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;2015-06-19&#39;</span><span class="p">,</span> <span class="s1">&#39;2016-06-18&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;2016-2017&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;2016-06-19&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-06-18&#39;</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">split_by_period</span><span class="p">(</span><span class="n">events_df</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">events_df</span><span class="p">[</span>
+            <span class="p">(</span><span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">start</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">end</span><span class="p">)</span>
+        <span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="ow">in</span> <span class="n">TIME_PERIODS</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">}</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">users_for_events</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the subset of users_df who attended at least one event in events_df.&quot;&quot;&quot;</span>
+    <span class="n">user_ids</span> <span class="o">=</span> <span class="p">{</span><span class="n">uid</span> <span class="k">for</span> <span class="n">attendees</span> <span class="ow">in</span> <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;attending&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">attendees</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">users_df</span><span class="p">[</span><span class="n">users_df</span><span class="p">[</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">user_ids</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+
+<span class="c1"># Build all eight period × size datasets</span>
+<span class="n">datasets</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">size_label</span><span class="p">,</span> <span class="n">size_events</span> <span class="ow">in</span> <span class="p">[(</span><span class="s1">&#39;small&#39;</span><span class="p">,</span> <span class="n">events_small</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;medium&#39;</span><span class="p">,</span> <span class="n">events_medium</span><span class="p">)]:</span>
+    <span class="k">for</span> <span class="n">period_name</span><span class="p">,</span> <span class="n">period_events</span> <span class="ow">in</span> <span class="n">split_by_period</span><span class="p">(</span><span class="n">size_events</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size_label</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">period_name</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">datasets</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="n">period_events</span><span class="p">,</span>
+            <span class="s1">&#39;users&#39;</span> <span class="p">:</span> <span class="n">users_for_events</span><span class="p">(</span><span class="n">period_events</span><span class="p">,</span> <span class="n">users</span><span class="p">),</span>
+        <span class="p">}</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">period_events</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> events, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">datasets</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;users&#39;</span><span class="p">])</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> users&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2013-2014: 8,556 events, 64,651 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2014-2015: 9,904 events, 73,877 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2015-2016: 14,172 events, 101,016 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2016-2017: 17,845 events, 115,214 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2013-2014: 4,713 events, 126,884 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2014-2015: 5,779 events, 150,725 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2015-2016: 7,766 events, 189,671 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2016-2017: 7,575 events, 192,145 users
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="per-period-iterative-cleaning">
+<h2>8. Per-Period Iterative Cleaning<a class="headerlink" href="#per-period-iterative-cleaning" title="Link to this heading">#</a></h2>
+<p>After splitting, each dataset is cleaned independently to remove events that have no political attendees within the specific period and size subset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">evts</span> <span class="o">=</span> <span class="n">update_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">])</span>
+    <span class="n">usrs</span> <span class="o">=</span> <span class="n">update_event_counts_for_users</span><span class="p">(</span><span class="n">evts</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">evts</span><span class="p">,</span> <span class="n">usrs</span> <span class="o">=</span> <span class="n">iterative_drop</span><span class="p">(</span><span class="n">evts</span><span class="p">,</span> <span class="n">usrs</span><span class="p">,</span> <span class="n">min_political</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">drop_users</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Final: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">evts</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> events, </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">usrs</span><span class="p">)</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> users&quot;</span><span class="p">)</span>
+
+    <span class="n">datasets</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="n">evts</span><span class="p">,</span> <span class="s1">&#39;users&#39;</span><span class="p">:</span> <span class="n">usrs</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2013-2014
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 8,556 events, 64,651 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2014-2015
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 9,904 events, 73,877 users
+
+small_2015-2016
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 14,172 events, 101,016 users
+
+small_2016-2017
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 17,845 events, 115,214 users
+
+medium_2013-2014
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 4,713 events, 126,884 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2014-2015
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 5,779 events, 150,725 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2015-2016
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 7,766 events, 189,671 users
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2016-2017
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged in 1 iteration(s)
+  Final: 7,575 events, 192,145 users
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="save-outputs">
+<h2>9. Save Outputs<a class="headerlink" href="#save-outputs" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;events_</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;users_</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved 16 datasets to </span><span class="si">{</span><span class="n">DATA_DIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Summary:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="s1">&#39;Dataset&#39;</span><span class="si">:</span><span class="s2">&lt;25</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Events&#39;</span><span class="si">:</span><span class="s2">&gt;8</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Users&#39;</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="s1">&#39;Political users&#39;</span><span class="si">:</span><span class="s2">&gt;16</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">62</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">datasets</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="n">n_political</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">][</span><span class="s1">&#39;political&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">:</span><span class="s2">&lt;25</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">])</span><span class="si">:</span><span class="s2">&gt;8,</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;users&#39;</span><span class="p">])</span><span class="si">:</span><span class="s2">&gt;10,</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">n_political</span><span class="si">:</span><span class="s2">&gt;16,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved 16 datasets to ../data/processed
+
+Summary:
+Dataset                     Events      Users  Political users
+--------------------------------------------------------------
+medium_2013-2014             4,713    126,884           25,387
+medium_2014-2015             5,779    150,725           30,833
+medium_2015-2016             7,766    189,671           38,114
+medium_2016-2017             7,575    192,145           37,419
+small_2013-2014              8,556     64,651           15,243
+small_2014-2015              9,904     73,877           17,504
+small_2015-2016             14,172    101,016           23,333
+small_2016-2017             17,845    115,214           26,276
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="02_graph_construction.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebook 2: Graph Construction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-raw-data">1. Load Raw Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter-events">2. Filter Events</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-user-dataset">3. Build User Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bot-removal">4. Bot Removal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterative-cleaning">5. Iterative Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideology-scoring">6. Ideology Scoring</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-by-event-size-and-time-period">7. Split by Event Size and Time Period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#per-period-iterative-cleaning">8. Per-Period Iterative Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-outputs">9. Save Outputs</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Christian Cole Turner
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

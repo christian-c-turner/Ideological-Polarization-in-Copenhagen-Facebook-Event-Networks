@@ -1,0 +1,1126 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Notebook 3: Ideology Analysis — Generalized Euclidean Distance &#8212; Ideological Polarization in Urban Social Networks: A Study of Facebook Event Attendance in Copenhagen (2013–2017)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/03_ideology_analysis';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notebook 4: Demographic Mixing Analysis" href="04_demographic_mixing.html" />
+    <link rel="prev" title="Notebook 2: Graph Construction" href="02_graph_construction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="01_data_cleaning.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ideological Polarization in Urban Social Networks: A Study of Facebook Event Attendance in Copenhagen (2013–2017)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="01_data_cleaning.html">
+                    Notebook 1: Data Cleaning and Preprocessing
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="02_graph_construction.html">Notebook 2: Graph Construction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebook 3: Ideology Analysis — Generalized Euclidean Distance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_demographic_mixing.html">Notebook 4: Demographic Mixing Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_supplementary_analysis.html">Notebook 5: Supplementary Analysis</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/christian-c-turner/Ideological-Polarization-in-Copenhagen-Facebook-Event-Networks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/03_ideology_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Notebook 3: Ideology Analysis — Generalized Euclidean Distance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-inputs">1. Load Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-euclidean-distance">2. Generalized Euclidean Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#null-model">3. Null Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-7-1-ideology-sd-statistics">4. Table 7.1 — Ideology SD Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-d-2-ge-distance-results">5. Table D.2 — GE Distance Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-d-3-event-network-basic-statistics">6. Table D.3 — Event Network Basic Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-c-network-construction-statistics">Appendix C — Network Construction Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-c-2-user-counts-by-ideological-orientation">Table C.2 — User Counts by Ideological Orientation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-c-3-event-level-ideology-data">Table C.3 — Event-Level Ideology Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-7-1-ge-distance-over-time">7. Figure 7.1 — GE Distance Over Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-7-2-ge-null-model-results">8. Figure 7.2 — GE Null Model Results</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="notebook-3-ideology-analysis-generalized-euclidean-distance">
+<h1>Notebook 3: Ideology Analysis — Generalized Euclidean Distance<a class="headerlink" href="#notebook-3-ideology-analysis-generalized-euclidean-distance" title="Link to this heading">#</a></h1>
+<p>Measures ideological polarization in the event-event networks using the Generalized Euclidean (GE) measure (Coscia, 2020; Hohmann et al., 2023), and evaluates statistical significance via a shuffle-based null model.</p>
+<p><strong>Inputs</strong> from <code class="docutils literal notranslate"><span class="pre">../data/processed/</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">backboned_graph_{key}.pkl</span></code> — noise-corrected event-event LCC graphs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filtered_events_{key}.pkl</span></code> — event DataFrames (LCC only)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filtered_users_{key}.pkl</span></code> — user DataFrames (connected to LCC events)</p></li>
+</ul>
+<p><strong>Outputs</strong> (displayed inline):</p>
+<ul class="simple">
+<li><p>Table 7.1 — ideology SD statistics</p></li>
+<li><p>Table D.2 — GE distance results</p></li>
+<li><p>Table D.3 — event network basic statistics</p></li>
+<li><p>Figure 7.1 — GE distance over time</p></li>
+<li><p>Figure 7.2 — GE null model results</p></li>
+</ul>
+<p><strong>Pipeline</strong></p>
+<ol class="arabic simple">
+<li><p>Compute GE distance for each event-event network</p></li>
+<li><p>Run 10-shuffle null model per network</p></li>
+<li><p>Compute Table 7.1 ideology SD statistics</p></li>
+<li><p>Compute Table D.3 event network statistics</p></li>
+<li><p>Plot Figures 7.1 and 7.2</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.sparse.csgraph</span><span class="w"> </span><span class="kn">import</span> <span class="n">laplacian</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;../data/processed&#39;</span><span class="p">)</span>
+
+<span class="n">KEYS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;small_2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;small_2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;small_2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;small_2016-2017&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;medium_2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;medium_2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;medium_2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;medium_2016-2017&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">YEARS</span>          <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">])</span>
+<span class="n">ELECTION_YEAR</span>  <span class="o">=</span> <span class="mf">2015.5</span>
+<span class="n">SHADING_RANGES</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2013.5</span><span class="p">,</span> <span class="mf">2014.5</span><span class="p">,</span> <span class="mf">2015.5</span><span class="p">,</span> <span class="mf">2016.5</span><span class="p">,</span> <span class="mf">2017.5</span><span class="p">]</span>
+<span class="n">SHADES</span>         <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#D1F2EB&quot;</span><span class="p">,</span> <span class="s2">&quot;#FCF3CB&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="load-inputs">
+<h2>1. Load Inputs<a class="headerlink" href="#load-inputs" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_pkl</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">backboned_graphs</span>  <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">load_pkl</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;backboned_graph_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+<span class="n">filtered_events</span>   <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;filtered_events_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span>  <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+<span class="n">filtered_users</span>    <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;filtered_users_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span>   <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loaded backboned graphs, filtered events, and filtered users for all 8 datasets.&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">:</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">backboned_graphs</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">G</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> nodes, </span><span class="si">{</span><span class="n">G</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> edges&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded backboned graphs, filtered events, and filtered users for all 8 datasets.
+  small_2013-2014: 8,210 nodes, 120,395 edges
+  small_2014-2015: 9,603 nodes, 161,359 edges
+  small_2015-2016: 13,838 nodes, 255,862 edges
+  small_2016-2017: 17,459 nodes, 346,228 edges
+  medium_2013-2014: 4,709 nodes, 372,565 edges
+  medium_2014-2015: 5,779 nodes, 542,037 edges
+  medium_2015-2016: 7,764 nodes, 812,899 edges
+  medium_2016-2017: 7,573 nodes, 691,767 edges
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="generalized-euclidean-distance">
+<h2>2. Generalized Euclidean Distance<a class="headerlink" href="#generalized-euclidean-distance" title="Link to this heading">#</a></h2>
+<p>The GE measure (Coscia, 2020) quantifies the structural cost of transporting opinion mass from one ideological group to another across the network. Each event receives an opinion value from its weighted ideology score:</p>
+<ul class="simple">
+<li><p><strong>o⁺</strong>: right-leaning component — <code class="docutils literal notranslate"><span class="pre">max(ideology,</span> <span class="pre">0)</span></code></p></li>
+<li><p><strong>o⁻</strong>: left-leaning component — <code class="docutils literal notranslate"><span class="pre">max(−ideology,</span> <span class="pre">0)</span></code></p></li>
+</ul>
+<p>The GE distance is:
+$<span class="math notranslate nohighlight">\(\text{GE} = \sqrt{(\mathbf{v}^+ - \mathbf{v}^-)^\top \mathbf{L}^+ (\mathbf{v}^+ - \mathbf{v}^-)}\)</span>$</p>
+<p>where <strong>L</strong>⁺ is the Moore-Penrose pseudoinverse of the graph Laplacian.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_ge</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute GE distance for a weighted graph with ideology node attributes.</span>
+
+<span class="sd">    Nodes missing or with NaN ideology are treated as neutral (contribute 0</span>
+<span class="sd">    to both opinion vectors and cancel out in the difference).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">adjacency_matrix</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">laplacian</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+    <span class="n">nodes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+    <span class="n">ideology</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">n</span><span class="p">:</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span>
+    <span class="p">}</span>
+
+    <span class="n">v_plus</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">max</span><span class="p">(</span><span class="n">ideology</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>         <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">ideology</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">else</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">])</span>
+    <span class="n">v_minus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="n">ideology</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">if</span> <span class="n">ideology</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.0</span>
+                        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">ideology</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">else</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">])</span>
+
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">v_plus</span> <span class="o">-</span> <span class="n">v_minus</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">L</span> <span class="o">@</span> <span class="n">diff</span><span class="p">))</span>
+
+
+<span class="n">ge_results</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">G</span> <span class="ow">in</span> <span class="n">backboned_graphs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">ge</span> <span class="o">=</span> <span class="n">compute_ge</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+    <span class="n">ge_results</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">ge</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: GE = </span><span class="si">{</span><span class="n">ge</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/linalg/_linalg.py:3383: RuntimeWarning: divide by zero encountered in matmul
+  return _core_matmul(x1, x2)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/linalg/_linalg.py:3383: RuntimeWarning: overflow encountered in matmul
+  return _core_matmul(x1, x2)
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/numpy/linalg/_linalg.py:3383: RuntimeWarning: invalid value encountered in matmul
+  return _core_matmul(x1, x2)
+/tmp/claude-501/ipykernel_81367/3240956658.py:21: RuntimeWarning: divide by zero encountered in matmul
+  return float(np.sqrt(diff.T @ L @ diff))
+/tmp/claude-501/ipykernel_81367/3240956658.py:21: RuntimeWarning: overflow encountered in matmul
+  return float(np.sqrt(diff.T @ L @ diff))
+/tmp/claude-501/ipykernel_81367/3240956658.py:21: RuntimeWarning: invalid value encountered in matmul
+  return float(np.sqrt(diff.T @ L @ diff))
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2013-2014: GE = 7.8695
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2014-2015: GE = 8.1389
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2015-2016: GE = 10.5686
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2016-2017: GE = 9.3653
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2013-2014: GE = 1.0556
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2014-2015: GE = 1.2344
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2015-2016: GE = 1.1745
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2016-2017: GE = 1.1416
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="null-model">
+<h2>3. Null Model<a class="headerlink" href="#null-model" title="Link to this heading">#</a></h2>
+<p>Ideology labels are shuffled randomly across events 10 times per graph. The resulting distribution shows the expected GE distance under random assignment, providing a baseline for assessing the degree of ideological clustering.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N_SHUFFLES</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">ge_null</span>    <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">G</span> <span class="ow">in</span> <span class="n">backboned_graphs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+
+    <span class="n">A</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">adjacency_matrix</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;weight&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">todense</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">L</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">laplacian</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+    <span class="n">nodes</span>    <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+    <span class="n">ideology</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">n</span><span class="p">:</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span>
+        <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="n">values</span>   <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ideology</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">node_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ideology</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="n">shuffled_ge</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N_SHUFFLES</span><span class="p">):</span>
+        <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">shuffled</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">node_keys</span><span class="p">,</span> <span class="n">values</span><span class="p">))</span>
+
+        <span class="n">v_plus</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">max</span><span class="p">(</span><span class="n">shuffled</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>                              <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">])</span>
+        <span class="n">v_minus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="n">shuffled</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">shuffled</span> <span class="ow">and</span> <span class="n">shuffled</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">0.0</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">])</span>
+
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">v_plus</span> <span class="o">-</span> <span class="n">v_minus</span>
+        <span class="n">shuffled_ge</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">L</span> <span class="o">@</span> <span class="n">diff</span><span class="p">)))</span>
+
+    <span class="n">ge_null</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">shuffled_ge</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Mean ± SD: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">shuffled_ge</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> ± </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">shuffled_ge</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2013-2014...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/claude-501/ipykernel_81367/2057116162.py:29: RuntimeWarning: divide by zero encountered in matmul
+  shuffled_ge.append(float(np.sqrt(diff.T @ L @ diff)))
+/tmp/claude-501/ipykernel_81367/2057116162.py:29: RuntimeWarning: overflow encountered in matmul
+  shuffled_ge.append(float(np.sqrt(diff.T @ L @ diff)))
+/tmp/claude-501/ipykernel_81367/2057116162.py:29: RuntimeWarning: invalid value encountered in matmul
+  shuffled_ge.append(float(np.sqrt(diff.T @ L @ diff)))
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 4.9932 ± 0.1032
+small_2014-2015...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 4.9017 ± 0.1381
+small_2015-2016...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 5.4180 ± 0.0778
+small_2016-2017...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 5.8618 ± 0.0726
+medium_2013-2014...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 0.6835 ± 0.0308
+medium_2014-2015...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 0.7406 ± 0.0453
+medium_2015-2016...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 0.7589 ± 0.0099
+medium_2016-2017...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Mean ± SD: 0.7563 ± 0.0410
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="table-7-1-ideology-sd-statistics">
+<h2>4. Table 7.1 — Ideology SD Statistics<a class="headerlink" href="#table-7-1-ideology-sd-statistics" title="Link to this heading">#</a></h2>
+<p>Two complementary measures of ideological spread:</p>
+<ul class="simple">
+<li><p><strong>Inter-event SD</strong>: standard deviation of weighted ideology scores <em>across</em> events — how spread out the events are ideologically.</p></li>
+<li><p><strong>Intra-event SD</strong>: for each event, compute the SD of its political attendees’ ideology scores; report the average across all events — how mixed each individual event is.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">inter_event_sd</span><span class="p">(</span><span class="n">events_df</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">events_df</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">avg_intra_event_sd</span><span class="p">(</span><span class="n">events_df</span><span class="p">,</span> <span class="n">users_df</span><span class="p">):</span>
+    <span class="n">user_ideology</span> <span class="o">=</span> <span class="n">users_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;hashed_id&#39;</span><span class="p">)[</span><span class="s1">&#39;normalized_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+
+    <span class="n">event_sds</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">ev</span> <span class="ow">in</span> <span class="n">events_df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">scores</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">user_ideology</span><span class="p">[</span><span class="n">uid</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">ev</span><span class="p">[</span><span class="s1">&#39;political_attendees&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">uid</span> <span class="ow">in</span> <span class="n">user_ideology</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">event_sds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">event_sds</span><span class="p">)</span> <span class="k">if</span> <span class="n">event_sds</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+
+<span class="n">table_7_1_rows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;2016-2017&#39;</span><span class="p">]:</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Time Period&#39;</span><span class="p">:</span> <span class="n">period</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;small&#39;</span><span class="p">,</span> <span class="s1">&#39;medium&#39;</span><span class="p">]:</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">period</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">row</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Inter-event SD (</span><span class="si">{</span><span class="n">size</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">inter_event_sd</span><span class="p">(</span><span class="n">filtered_events</span><span class="p">[</span><span class="n">key</span><span class="p">]),</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="n">row</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;Avg intra-event SD (</span><span class="si">{</span><span class="n">size</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span>
+            <span class="n">avg_intra_event_sd</span><span class="p">(</span><span class="n">filtered_events</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">filtered_users</span><span class="p">[</span><span class="n">key</span><span class="p">]),</span> <span class="mi">3</span>
+        <span class="p">)</span>
+    <span class="n">table_7_1_rows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="n">table_7_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table_7_1_rows</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Time Period&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Table 7.1:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_7_1</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Table 7.1:
+             Inter-event SD (small)  Avg intra-event SD (small)  Inter-event SD (medium)  Avg intra-event SD (medium)
+Time Period                                                                                                          
+2013-2014                     0.160                       0.290                    0.094                        0.387
+2014-2015                     0.159                       0.292                    0.102                        0.385
+2015-2016                     0.154                       0.300                    0.099                        0.385
+2016-2017                     0.154                       0.295                    0.093                        0.393
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="table-d-2-ge-distance-results">
+<h2>5. Table D.2 — GE Distance Results<a class="headerlink" href="#table-d-2-ge-distance-results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">table_d2_rows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;2016-2017&#39;</span><span class="p">]:</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">period</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">table_d2_rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;Event Size&#39;</span><span class="p">:</span> <span class="n">size</span><span class="p">,</span>
+            <span class="s1">&#39;Time Period&#39;</span><span class="p">:</span> <span class="n">period</span><span class="p">,</span>
+            <span class="s1">&#39;GE Distance&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">ge_results</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">})</span>
+
+<span class="n">table_d2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table_d2_rows</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Table D.2 — GE Distance Results:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_d2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Table D.2 — GE Distance Results:
+Event Size Time Period  GE Distance
+     Small   2013-2014         7.87
+     Small   2014-2015         8.14
+     Small   2015-2016        10.57
+     Small   2016-2017         9.37
+    Medium   2013-2014         1.06
+    Medium   2014-2015         1.23
+    Medium   2015-2016         1.17
+    Medium   2016-2017         1.14
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="table-d-3-event-network-basic-statistics">
+<h2>6. Table D.3 — Event Network Basic Statistics<a class="headerlink" href="#table-d-3-event-network-basic-statistics" title="Link to this heading">#</a></h2>
+<p>Standard network measures for the event-event LCC graphs. Average shortest path length and diameter are approximated by sampling 1,000 source nodes.</p>
+</section>
+<section id="appendix-c-network-construction-statistics">
+<h2>Appendix C — Network Construction Statistics<a class="headerlink" href="#appendix-c-network-construction-statistics" title="Link to this heading">#</a></h2>
+<section id="table-c-2-user-counts-by-ideological-orientation">
+<h3>Table C.2 — User Counts by Ideological Orientation<a class="headerlink" href="#table-c-2-user-counts-by-ideological-orientation" title="Link to this heading">#</a></h3>
+</section>
+<section id="table-c-3-event-level-ideology-data">
+<h3>Table C.3 — Event-Level Ideology Data<a class="headerlink" href="#table-c-3-event-level-ideology-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PERIODS_ORDER</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;2016-2017&#39;</span><span class="p">]</span>
+
+<span class="c1"># ── Table C.2: User counts by ideological orientation ─────────────────────────</span>
+<span class="n">c2_rows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">PERIODS_ORDER</span><span class="p">:</span>
+        <span class="n">key</span>  <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">period</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">u</span>    <span class="o">=</span> <span class="n">filtered_users</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="n">pol</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="s1">&#39;political&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="n">r</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">u</span><span class="p">[</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;R&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="n">l</span>    <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">u</span><span class="p">[</span><span class="s1">&#39;l_r_min_max&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;L&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="n">c2_rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;Event Size&#39;</span><span class="p">:</span>            <span class="n">size</span><span class="p">,</span>
+            <span class="s1">&#39;Time Period&#39;</span><span class="p">:</span>           <span class="n">period</span><span class="p">,</span>
+            <span class="s1">&#39;Total Political Users&#39;</span><span class="p">:</span> <span class="n">pol</span><span class="p">,</span>
+            <span class="s1">&#39;Total R Users&#39;</span><span class="p">:</span>         <span class="n">r</span><span class="p">,</span>
+            <span class="s1">&#39;Total L Users&#39;</span><span class="p">:</span>         <span class="n">l</span><span class="p">,</span>
+            <span class="s1">&#39;% R Users&#39;</span><span class="p">:</span>             <span class="nb">round</span><span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="n">pol</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">pol</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s1">&#39;% L Users&#39;</span><span class="p">:</span>             <span class="nb">round</span><span class="p">(</span><span class="n">l</span> <span class="o">/</span> <span class="n">pol</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="k">if</span> <span class="n">pol</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="p">})</span>
+
+<span class="n">table_c2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">c2_rows</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Table C.2 — User Counts by Ideological Orientation:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_c2</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+
+<span class="c1"># ── Table C.3: Event-level ideology data ──────────────────────────────────────</span>
+<span class="n">c3_rows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">PERIODS_ORDER</span><span class="p">:</span>
+        <span class="n">key</span>  <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">period</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">ev</span>   <span class="o">=</span> <span class="n">filtered_events</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="n">n</span>    <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ev</span><span class="p">)</span>
+        <span class="n">avg</span>  <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">l_n</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="n">r_n</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="n">neu</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ev</span><span class="p">[</span><span class="s1">&#39;weighted_ideology_min_max&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="n">c3_rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;Event Size&#39;</span><span class="p">:</span>                <span class="n">size</span><span class="p">,</span>
+            <span class="s1">&#39;Time Period&#39;</span><span class="p">:</span>               <span class="n">period</span><span class="p">,</span>
+            <span class="s1">&#39;Avg Weighted Ideology&#39;</span><span class="p">:</span>     <span class="n">avg</span><span class="p">,</span>
+            <span class="s1">&#39;Total Events&#39;</span><span class="p">:</span>              <span class="n">n</span><span class="p">,</span>
+            <span class="s1">&#39;L Event Count&#39;</span><span class="p">:</span>             <span class="n">l_n</span><span class="p">,</span>
+            <span class="s1">&#39;R Event Count&#39;</span><span class="p">:</span>             <span class="n">r_n</span><span class="p">,</span>
+            <span class="s1">&#39;Neutral Event Count&#39;</span><span class="p">:</span>       <span class="n">neu</span><span class="p">,</span>
+            <span class="s1">&#39;% L Events&#39;</span><span class="p">:</span>               <span class="nb">round</span><span class="p">(</span><span class="n">l_n</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="s1">&#39;% R Events&#39;</span><span class="p">:</span>               <span class="nb">round</span><span class="p">(</span><span class="n">r_n</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="s1">&#39;% Neutral Events&#39;</span><span class="p">:</span>         <span class="nb">round</span><span class="p">(</span><span class="n">neu</span> <span class="o">/</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">})</span>
+
+<span class="n">table_c3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">c3_rows</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Table C.3 — Event-Level Ideology Data:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_c3</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Table C.2 — User Counts by Ideological Orientation:
+Event Size Time Period  Total Political Users  Total R Users  Total L Users  % R Users  % L Users
+     Small   2013-2014                  14646           2891          11755      19.74      80.26
+     Small   2014-2015                  16965           3491          13474      20.58      79.42
+     Small   2015-2016                  22774           4700          18074      20.64      79.36
+     Small   2016-2017                  25703           5319          20384      20.69      79.31
+    Medium   2013-2014                  25370           5513          19857      21.73      78.27
+    Medium   2014-2015                  30833           6815          24018      22.10      77.90
+    Medium   2015-2016                  38100           8563          29537      22.48      77.52
+    Medium   2016-2017                  37408           8376          29032      22.39      77.61
+
+Table C.3 — Event-Level Ideology Data:
+Event Size Time Period  Avg Weighted Ideology  Total Events  L Event Count  R Event Count  Neutral Event Count  % L Events  % R Events  % Neutral Events
+     Small   2013-2014                  -0.12          8210           6876           1202                  132       83.75       14.64              1.61
+     Small   2014-2015                  -0.11          9603           7891           1542                  170       82.17       16.06              1.77
+     Small   2015-2016                  -0.11         13838          11382           2186                  270       82.25       15.80              1.95
+     Small   2016-2017                  -0.11         17459          14322           2848                  289       82.03       16.31              1.66
+    Medium   2013-2014                  -0.09          4709           3983            619                  107       84.58       13.15              2.27
+    Medium   2014-2015                  -0.09          5779           4872            773                  134       84.31       13.38              2.32
+    Medium   2015-2016                  -0.09          7764           6605            973                  186       85.07       12.53              2.40
+    Medium   2016-2017                  -0.08          7573           6345           1024                  204       83.78       13.52              2.69
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">approx_path_stats</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">n_sample</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Estimate average shortest path length and diameter by BFS from sampled nodes.&quot;&quot;&quot;</span>
+    <span class="n">rng</span>       <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">nodes</span>     <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+    <span class="n">sample</span>    <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">n_sample</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)))</span>
+    <span class="n">all_dists</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">src</span> <span class="ow">in</span> <span class="n">sample</span><span class="p">:</span>
+        <span class="n">dists</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">single_source_shortest_path_length</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">src</span><span class="p">)</span>
+        <span class="n">all_dists</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">d</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dists</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">all_dists</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">all_dists</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">event_network_stats</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+    <span class="n">clustering</span>    <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">average_clustering</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">density</span>       <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">density</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">assortativity</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">degree_assortativity_coefficient</span><span class="p">(</span><span class="n">G</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">communities</span>   <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">community</span><span class="o">.</span><span class="n">louvain_communities</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">modularity</span>    <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">community</span><span class="o">.</span><span class="n">modularity</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">communities</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">avg_path</span><span class="p">,</span> <span class="n">diameter</span> <span class="o">=</span> <span class="n">approx_path_stats</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">clustering</span><span class="p">,</span> <span class="n">density</span><span class="p">,</span> <span class="n">assortativity</span><span class="p">,</span> <span class="n">modularity</span><span class="p">,</span> <span class="n">avg_path</span><span class="p">,</span> <span class="n">diameter</span>
+
+
+<span class="c1"># Load event-event LCC graphs (needed for stats — backboned has same topology)</span>
+<span class="n">event_graphs</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">load_pkl</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;event_graph_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">.pkl&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">KEYS</span><span class="p">}</span>
+
+<span class="n">table_d3_rows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">size</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Small&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">period</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;2013-2014&#39;</span><span class="p">,</span> <span class="s1">&#39;2014-2015&#39;</span><span class="p">,</span> <span class="s1">&#39;2015-2016&#39;</span><span class="p">,</span> <span class="s1">&#39;2016-2017&#39;</span><span class="p">]:</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">period</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">G</span>   <span class="o">=</span> <span class="n">event_graphs</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+        <span class="n">cc</span><span class="p">,</span> <span class="n">dens</span><span class="p">,</span> <span class="n">assort</span><span class="p">,</span> <span class="n">mod</span><span class="p">,</span> <span class="n">avgp</span><span class="p">,</span> <span class="n">diam</span> <span class="o">=</span> <span class="n">event_network_stats</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+        <span class="n">table_d3_rows</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;Event Size&#39;</span><span class="p">:</span> <span class="n">size</span><span class="p">,</span> <span class="s1">&#39;Time Period&#39;</span><span class="p">:</span> <span class="n">period</span><span class="p">,</span>
+            <span class="s1">&#39;Events&#39;</span><span class="p">:</span> <span class="n">G</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">(),</span> <span class="s1">&#39;Edges&#39;</span><span class="p">:</span> <span class="n">G</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">(),</span>
+            <span class="s1">&#39;Clustering Coeff&#39;</span><span class="p">:</span> <span class="n">cc</span><span class="p">,</span> <span class="s1">&#39;Density&#39;</span><span class="p">:</span> <span class="n">dens</span><span class="p">,</span>
+            <span class="s1">&#39;Degree Assortativity&#39;</span><span class="p">:</span> <span class="n">assort</span><span class="p">,</span> <span class="s1">&#39;Modularity&#39;</span><span class="p">:</span> <span class="n">mod</span><span class="p">,</span>
+            <span class="s1">&#39;Avg Shortest Path (approx)&#39;</span><span class="p">:</span> <span class="n">avgp</span><span class="p">,</span> <span class="s1">&#39;Diameter (approx)&#39;</span><span class="p">:</span> <span class="n">diam</span><span class="p">,</span>
+        <span class="p">})</span>
+
+<span class="n">table_d3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table_d3_rows</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Table D.3 — Event Networks LCC Basic Statistics:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table_d3</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2013-2014...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2014-2015...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2015-2016...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>small_2016-2017...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2013-2014...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2014-2015...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2015-2016...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium_2016-2017...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Table D.3 — Event Networks LCC Basic Statistics:
+Event Size Time Period  Events  Edges  Clustering Coeff  Density  Degree Assortativity  Modularity  Avg Shortest Path (approx)  Diameter (approx)
+     Small   2013-2014    8210 120395              0.47   0.0036                  0.43        0.76                        3.67                 11
+     Small   2014-2015    9603 161359              0.46   0.0035                  0.37        0.75                        3.56                 10
+     Small   2015-2016   13838 255862              0.42   0.0027                  0.34        0.69                        3.49                  9
+     Small   2016-2017   17459 346228              0.41   0.0023                  0.43        0.67                        3.47                 10
+    Medium   2013-2014    4709 372565              0.24   0.0336                  0.28        0.49                        2.23                  6
+    Medium   2014-2015    5779 542037              0.22   0.0325                  0.26        0.46                        2.19                  5
+    Medium   2015-2016    7764 812899              0.19   0.0270                  0.25        0.44                        2.18                  5
+    Medium   2016-2017    7573 691767              0.19   0.0241                  0.25        0.45                        2.23                  5
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="figure-7-1-ge-distance-over-time">
+<h2>7. Figure 7.1 — GE Distance Over Time<a class="headerlink" href="#figure-7-1-ge-distance-over-time" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values_small</span>  <span class="o">=</span> <span class="p">[</span><span class="n">ge_results</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;small_</span><span class="si">{</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span>  <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">YEARS</span><span class="p">]</span>
+<span class="n">values_medium</span> <span class="o">=</span> <span class="p">[</span><span class="n">ge_results</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;medium_</span><span class="si">{</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">YEARS</span><span class="p">]</span>
+
+<span class="n">y_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">values_small</span> <span class="o">+</span> <span class="n">values_medium</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.1</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SHADING_RANGES</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_betweenx</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_max</span><span class="p">],</span> <span class="n">SHADING_RANGES</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">SHADING_RANGES</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span>
+                     <span class="n">color</span><span class="o">=</span><span class="n">SHADES</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">YEARS</span><span class="p">,</span> <span class="n">values_small</span><span class="p">,</span>  <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Small Events&#39;</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;forestgreen&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">YEARS</span><span class="p">,</span> <span class="n">values_medium</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Medium Events&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ELECTION_YEAR</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Election June 18, 2015&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">YEARS</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Generalized Euclidean Distance&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;GE Distance Over Time</span><span class="se">\n</span><span class="s1">(June 2013 – June 2017)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">&#39;figure_7_1_ge_distance.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b75f0b82789521de7c39ed07a8eda03dcb785b72fa0e31ad3cc70f6d31fe4d8e.png" src="../_images/b75f0b82789521de7c39ed07a8eda03dcb785b72fa0e31ad3cc70f6d31fe4d8e.png" />
+</div>
+</div>
+</section>
+<section id="figure-7-2-ge-null-model-results">
+<h2>8. Figure 7.2 — GE Null Model Results<a class="headerlink" href="#figure-7-2-ge-null-model-results" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">null_stats</span><span class="p">(</span><span class="n">size_label</span><span class="p">):</span>
+    <span class="n">means</span><span class="p">,</span> <span class="n">stds</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">YEARS</span><span class="p">:</span>
+        <span class="n">vals</span> <span class="o">=</span> <span class="n">ge_null</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">size_label</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span> <span class="o">*</span> <span class="n">N_SHUFFLES</span><span class="p">)</span>
+        <span class="n">means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vals</span><span class="p">))</span>
+        <span class="n">stds</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">vals</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">means</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">stds</span><span class="p">)</span>
+
+<span class="n">mean_s</span><span class="p">,</span> <span class="n">std_s</span> <span class="o">=</span> <span class="n">null_stats</span><span class="p">(</span><span class="s1">&#39;small&#39;</span><span class="p">)</span>
+<span class="n">mean_m</span><span class="p">,</span> <span class="n">std_m</span> <span class="o">=</span> <span class="n">null_stats</span><span class="p">(</span><span class="s1">&#39;medium&#39;</span><span class="p">)</span>
+
+<span class="c1"># Combine observed and null for shared y-axis</span>
+<span class="n">all_vals</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">values_small</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">values_medium</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">mean_s</span> <span class="o">+</span> <span class="n">std_s</span><span class="p">)</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">mean_m</span> <span class="o">+</span> <span class="n">std_m</span><span class="p">)</span>
+<span class="n">y_max</span>    <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">all_vals</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">v</span><span class="p">))</span> <span class="o">*</span> <span class="mf">1.15</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">SHADING_RANGES</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_betweenx</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_max</span><span class="p">],</span> <span class="n">SHADING_RANGES</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">SHADING_RANGES</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span>
+                     <span class="n">color</span><span class="o">=</span><span class="n">SHADES</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">YEARS</span><span class="p">,</span> <span class="n">values_small</span><span class="p">,</span>  <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;forestgreen&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Small Events (Observed)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">YEARS</span><span class="p">,</span> <span class="n">values_medium</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span>      <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Medium Events (Observed)&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">YEARS</span><span class="p">,</span> <span class="n">mean_s</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">std_s</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;forestgreen&#39;</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Small Events (Null)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">YEARS</span><span class="p">,</span> <span class="n">mean_m</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">std_m</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;s--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Medium Events (Null)&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">ELECTION_YEAR</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Election June 18, 2015&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">YEARS</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;GE Distance&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;GE Distance vs. Null Model</span><span class="se">\n</span><span class="s1">(Null: mean ± SD of 10 shuffles)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">/</span> <span class="s1">&#39;figure_7_2_ge_null_model.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7d980dddb2326dda7ae844a04b3dd619df8294959c7800b103675ab1aa843b7d.png" src="../_images/7d980dddb2326dda7ae844a04b3dd619df8294959c7800b103675ab1aa843b7d.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_graph_construction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebook 2: Graph Construction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04_demographic_mixing.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebook 4: Demographic Mixing Analysis</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-inputs">1. Load Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalized-euclidean-distance">2. Generalized Euclidean Distance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#null-model">3. Null Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-7-1-ideology-sd-statistics">4. Table 7.1 — Ideology SD Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-d-2-ge-distance-results">5. Table D.2 — GE Distance Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-d-3-event-network-basic-statistics">6. Table D.3 — Event Network Basic Statistics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-c-network-construction-statistics">Appendix C — Network Construction Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-c-2-user-counts-by-ideological-orientation">Table C.2 — User Counts by Ideological Orientation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-c-3-event-level-ideology-data">Table C.3 — Event-Level Ideology Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-7-1-ge-distance-over-time">7. Figure 7.1 — GE Distance Over Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-7-2-ge-null-model-results">8. Figure 7.2 — GE Null Model Results</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Christian Cole Turner
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
