@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Ideology — Copenhagen &amp; Frederiksberg</title>
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="panel">
+    <h1>EVENT IDEOLOGY</h1>
+    <div class="legend">
+      <div class="legend-bar"></div>
+      <div class="legend-labels"><span>Left</span><span>Center</span><span>Right</span></div>
+      <div class="legend-note">Faded toward gray = politically mixed (high variance)</div>
+    </div>
+
+    <h2>YEAR</h2>
+    <div id="year-filter" class="btn-group"></div>
+
+    <h2>EVENT SIZE</h2>
+    <div id="size-filter" class="btn-group"></div>
+
+    <h2>SHOWING</h2>
+    <div id="stats" class="stats">—</div>
+  </div>
+
+  <div id="loading">Loading events…</div>
+
+  <script src="map.js"></script>
+</body>
+</html>

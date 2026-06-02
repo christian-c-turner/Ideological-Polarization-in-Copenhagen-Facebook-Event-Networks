@@ -1,0 +1,28 @@
+{
+  "scheme": "diverging-blue-white-red + graying-by-std",
+  "left_rgb": [
+    40,
+    90,
+    220
+  ],
+  "center_rgb": [
+    245,
+    245,
+    245
+  ],
+  "right_rgb": [
+    215,
+    45,
+    40
+  ],
+  "gray_rgb": [
+    150,
+    150,
+    150
+  ],
+  "graying_cap": 0.85,
+  "s_ref": 0.45737261759972625,
+  "mean_field": "average_normalized",
+  "weight_field": "n_political",
+  "opacity_field": "percent_political"
+}

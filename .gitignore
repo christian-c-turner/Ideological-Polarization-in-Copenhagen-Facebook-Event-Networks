@@ -5,6 +5,11 @@ raw-data/*.csv
 data/processed/*
 !data/processed/.gitkeep
 
+# Map — private per-event data kept local; only the aggregate is published.
+# Published files: events_aggregated.geojson, color_params.json, preview_small_all.png
+data/map/coords_lookup.pkl
+data/map/events.geojson
+
 # macOS
 .DS_Store
 
